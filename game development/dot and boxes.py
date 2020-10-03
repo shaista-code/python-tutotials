@@ -1,4 +1,4 @@
-# from numpy import asarray
+# from numpy import time as array
 import time
 
 import pyautogui  # pip install pyautogui
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     print("Hey.. Dino game about to start in 3 seconds")
     time.sleep(2)
     # hit('up')
-
+//If while statements:
     while True:
         image = ImageGrab.grab().convert('L')
         data = image.load()
