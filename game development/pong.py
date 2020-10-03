@@ -1,3 +1,4 @@
+#importing random module 
 import random
 
 import pygame, sys
@@ -5,7 +6,7 @@ import pygame, sys
 from pygame.locals import *
 
 pygame.init()
-
+//Adding clock
 fps = pygame.time.Clock()
 
 # colors
@@ -82,7 +83,7 @@ def init():
     paddle1_pos = [HALF_PAD_WIDTH - 1, HEIGHT // 2]
 
     paddle2_pos = [WIDTH + 1 - HALF_PAD_WIDTH, HEIGHT // 2]
-
+//Scoring
     l_score = 0
 
     r_score = 0
@@ -125,7 +126,7 @@ def draw(canvas):
 
         paddle1_pos[1] += paddle1_vel
 
-    if paddle2_pos[1] > HALF_PAD_HEIGHT and paddle2_pos[1] < HEIGHT - HALF_PAD_HEIGHT:
+    if paddle2_pos[1] >HALF_PAD_HEIGHT and paddle2_pos[1] < HEIGHT - HALF_PAD_HEIGHT:
 
         paddle2_pos[1] += paddle2_vel
 
@@ -145,7 +146,7 @@ def draw(canvas):
 
     # draw paddles and ball
 
-    pygame.draw.circle(canvas, RED, ball_pos, 20, 0)
+    pygame.draw.circle(canvas,RED, ball_pos, 20, 0)
 
     pygame.draw.polygon(canvas, GREEN, [[paddle1_pos[0] - HALF_PAD_WIDTH, paddle1_pos[1] - HALF_PAD_HEIGHT],
                                         [paddle1_pos[0] - HALF_PAD_WIDTH, paddle1_pos[1] + HALF_PAD_HEIGHT],
@@ -181,7 +182,7 @@ def draw(canvas):
         r_score += 1
 
         ball_init(True)
-
+#defining velocity
     if int(ball_pos[0]) >= WIDTH + 1 - BALL_RADIUS - PAD_WIDTH and int(ball_pos[1]) in range(
             paddle2_pos[1] - HALF_PAD_HEIGHT, paddle2_pos[1] + HALF_PAD_HEIGHT, 1):
 
@@ -212,14 +213,14 @@ def draw(canvas):
     canvas.blit(label2, (470, 20))
 
 
-# keydown handler
+# keydown handler:
 
 def keydown(event):
     global paddle1_vel, paddle2_vel
 
     if event.key == K_UP:
 
-        paddle2_vel = -8
+        paddle2_vel = -10
 
     elif event.key == K_DOWN:
 
