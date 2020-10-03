@@ -1,3 +1,4 @@
+#importing random module
 from random import choice
 
 from turtle import *
@@ -6,7 +7,7 @@ from freegames import floor, vector
 
 
 
-state = {'score': 0}
+state = {'score':0}
 
 path = Turtle(visible=False)
 
@@ -221,7 +222,7 @@ def move():
     goto(pacman.x + 10, pacman.y + 10)
 
     dot(20, 'yellow')
-
+#statements 
 
 
     for point, course in ghosts:
@@ -282,9 +283,9 @@ def change(x, y):
 
     if valid(pacman + vector(x, y)):
 
-        aim.x = x
+        aim.x =x
 
-        aim.y = y
+        aim.y =y
 
 
 
@@ -301,7 +302,7 @@ writer.color('white')
 writer.write(state['score'])
 
 listen()
-
+#key lambda functions
 onkey(lambda: change(5, 0), 'Right')
 
 onkey(lambda: change(-5, 0), 'Left')
