@@ -1,3 +1,4 @@
+#importing modules
 import pygame
 import random
 pygame.init()
@@ -5,7 +6,7 @@ pygame.init()
 white = (255, 255, 255)
 red = (255, 0, 0)
 black = (0, 0, 0)
-# Creating window
+# Creating window/canvas
 screen_width = 900
 screen_height = 600
 gameWindow = pygame.display.set_mode((screen_width, screen_height))
@@ -39,7 +40,7 @@ def gameloop():
     fps = 40
     while not exit_game:
         if game_over:
-            gameWindow.fill(white)
+            gameWindow.fill(white )
             text_screen("Game Over! Press Enter To Continue", red, 100, 250)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -80,7 +81,7 @@ def gameloop():
             snk_list.append(head)
             if len(snk_list)>snk_length:
                 del snk_list[0]
-            if head in snk_list[:-1]:
+            if head in snk_list[:-1 ]:
                 game_over = True
             if snake_x<0 or snake_x>screen_width or snake_y<0 or snake_y>screen_height:
                 game_over = True
