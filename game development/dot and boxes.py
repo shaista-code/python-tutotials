@@ -41,7 +41,7 @@ if __name__ == "__main__":
         # Draw the rectangle for cactus
         for i in range(275, 325):
             for j in range(563, 650):
-                data[i, j] = 0
+                data[i, j] =0
 
         # Draw the rectangle for birds
         for i in range(250, 300):
